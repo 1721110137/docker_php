@@ -21,7 +21,7 @@ RUN ln -fs /usr/share/zoneinfo/$TZ /etc/localtime && dpkg-reconfigure --frontend
 RUN apt-get install -y php php-cli php-mbstring
 
 # Copiar la carpeta de la aplicación al contenedor
-COPY ./app /home/app_php
+COPY ./app_php /home/app_php
 
 # Establecer el directorio de trabajo
 WORKDIR /home/app_php
